@@ -12,6 +12,7 @@ export default class User extends Component {
 
     state = {
         stars: [],
+        refresh: false,
     }
 
     static propTypes = {
@@ -24,14 +25,23 @@ export default class User extends Component {
         const { navigation } = this.props;
         const user = navigation.getParam('user');
 
+        this.setState({ refresh: true });
+
         const response = await api.get(`/users/${user.login}/starred`);
 
-        this.setState({ stars: response.data });
+        this.setState({
+            stars: response.data,
+            refresh: false,
+        });
+    }
+
+    onRefresh() {
+        this.componentDidMount();
     }
 
     render() {
         const { navigation } = this.props;
-        const { stars } = this.state;
+        const { stars, refresh } = this.state;
 
         const user = navigation.getParam('user');
 
@@ -45,6 +55,8 @@ export default class User extends Component {
 
                 <Stars
                     data={stars}
+                    onRefresh={() => this.onRefresh()}
+                    refreshing={refresh}
                     keyExtractor={star => String(star.id)}
                     renderItem={({ item }) => (
                         <Starred>
