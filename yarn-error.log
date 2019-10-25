@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js start
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add prop-types
 
 PATH: 
   C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python27\;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Users\Suporte\AppData\Local\Microsoft\WindowsApps;C:\Users\Suporte\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Suporte\AppData\Roaming\npm;%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;C:\Users\Suporte\AppData\Local\Yarn\bin
@@ -14,12 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: C:\Users\Suporte\Desktop\CODIGOS\github\modulo06\package.json: Unexpected token / in JSON at position 243
-      at JSON.parse (<anonymous>)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (C:\Program Files (x86)\Yarn\lib\cli.js:304:30)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:315:13
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Suporte\Desktop\CODIGOS\github\modulo06\node_modules\@babel\plugin-transform-runtime\node_modules\.bin'
 
 npm manifest: 
   {
@@ -32,7 +27,6 @@ npm manifest:
       "eject": "expo eject"
     },
     "dependencies": {
-      //"@react-native-community/async-storage": "^1.6.2",
       "axios": "^0.19.0",
       "expo": "^35.0.0",
       "react": "16.8.3",
@@ -939,11 +933,6 @@ Lockfile:
       noop-fn "^1.0.0"
       pouchdb-collections "^1.0.1"
       tiny-queue "^0.2.1"
-  
-  "@react-native-community/async-storage@^1.6.2":
-    version "1.6.2"
-    resolved "https://registry.yarnpkg.com/@react-native-community/async-storage/-/async-storage-1.6.2.tgz#a19ca7149c4dfe8216f2330e6b1ebfe2d075ef92"
-    integrity sha512-EJGsbrHubK1mGxPjWB74AaHAd5m9I+Gg2RRPZzMK6org7QOU9WOBnIMFqoeVto3hKOaEPlk8NV74H6G34/2pZQ==
   
   "@react-native-community/cli@^1.2.1":
     version "1.11.2"
